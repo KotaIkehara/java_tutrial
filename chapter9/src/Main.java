@@ -1,8 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Hero h1 = new Hero("minato");
-        System.out.println(h1.hp);
+        Hero h1 = new Hero();
         Hero h2 = new Hero();
+        System.out.println(h1.hp);
+        System.out.println(Hero.money);
         Wizard w = new Wizard();
         w.name = "スガワラ";
         w.hp = 50;

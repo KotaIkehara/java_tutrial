@@ -2,6 +2,7 @@ public class Hero {
   String name;
   int hp;
   Sword sword;
+  static int money;
 
   void attack() {
   };
@@ -35,7 +36,6 @@ public class Hero {
   }
 
   Hero() {
-    this.hp = 100;
-    this.name = "ダミー";
+    this("ダミー");
   }
 }

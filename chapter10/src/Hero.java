@@ -1,6 +1,6 @@
 public class Hero {
-  String name;
-  int hp;
+  private String name;
+  private int hp;
   Sword sword;
   static int money;
 
@@ -8,12 +8,12 @@ public class Hero {
     System.out.println("勇者は別れを告げた");
   }
 
-  void die() {
+  private void die() {
     System.out.println(this.name + "は死んでしまった！");
     System.out.print("GAME OVERです．");
   }
 
-  void attack(Matango m) {
+  public void attack(Matango m) {
     System.out.println(this.name + "の攻撃！");
     System.out.println("お化けキノコ" + m.suffix + "から2ポイントの反撃を受けた");
     this.hp -= 2;
@@ -57,5 +57,22 @@ public class Hero {
   static void setRandomMoney() {
     Hero.money = (int) (Math.random() * 1000);
     System.out.println("所持金を初期化しました");
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    if (name == null) {
+      throw new IllegalArgumentException("名前がnullである．処理を中断．");
+    }
+    if (name.length() <= 1) {
+      throw new IllegalArgumentException("名前が短すぎる．処理を中断．");
+    }
+    if (name.length() >= 8) {
+      throw new IllegalArgumentException("名前が長すぎる．処理を中断．");
+    }
+    this.name = name;
   }
 }

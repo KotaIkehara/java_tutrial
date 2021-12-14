@@ -28,4 +28,9 @@ public class Hero {
     this.hp = 100;
     System.out.println(this.name + "は，眠って回復した！");
   };
+
+  Hero(String name) {
+    this.hp = 100;
+    this.name = name;
+  }
 }

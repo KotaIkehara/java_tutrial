@@ -11,7 +11,7 @@ public class SuperHero extends Hero {
     System.out.println("着地した！");
   }
 
-  public void attack(Matango m) {
+  public void attack(Monster m) {
     super.attack(m);
     if (this.flying) {
       super.attack(m);

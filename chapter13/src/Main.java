@@ -1,13 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Hero h1 = new Hero();
-        Hero h2 = new Hero();
-        Wizard w1 = new Wizard();
-        Wizard w2 = new Wizard();
+        Monster[] monsters = new Monster[3];
 
-        h1.setHp(h1.getHp() + 50);
-        h2.setHp(h2.getHp() + 50);
-        w1.setHp(w1.getHp() + 50);
-        w2.setHp(w2.getHp() + 50);
+        monsters[0] = new Slime();
+        monsters[1] = new Slime();
+        monsters[2] = new Slime();
+
+        for (Monster m : monsters) {
+            m.run();
+        }
     }
 }

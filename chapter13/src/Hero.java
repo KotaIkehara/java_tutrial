@@ -2,28 +2,19 @@ public class Hero extends Character {
   Sword sword;
   static int money;
 
-  // public void attack(Matango m) {
-  // System.out.println(this.name + "の攻撃！");
-  // System.out.println("敵に10ポイントのダメージを与えた！");
-  // m.hp -= 10;
-  // }
-
   void bye() {
     System.out.println("勇者は別れを告げた");
   }
 
-  private void die() {
-    System.out.println(this.name + "は死んでしまった！");
-    System.out.print("GAME OVERです．");
-  }
+  // private void die() {
+  // System.outprintln(this.name + "は死んでしまった！");
+  // System.out.print("GAME OVERです．");
+  // }
 
-  public void attack(Matango m) {
+  public void attack(Monster m) {
     System.out.println(this.name + "の攻撃！");
-    System.out.println("お化けキノコ" + m.suffix + "から2ポイントの反撃を受けた");
-    this.hp -= 2;
-    if (this.hp <= 0) {
-      this.die();
-    }
+    System.out.println("敵に10ポイントのダメージを与えた！");
+    m.hp -= 10;
   };
 
   public void run() {

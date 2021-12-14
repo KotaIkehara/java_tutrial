@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         Hero h1 = new Hero("minato");
         System.out.println(h1.hp);
-        Hero h2 = new Hero("akasa");
+        Hero h2 = new Hero();
         Wizard w = new Wizard();
         w.name = "スガワラ";
         w.hp = 50;

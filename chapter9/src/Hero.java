@@ -38,4 +38,8 @@ public class Hero {
   Hero() {
     this("ダミー");
   }
+
+  static void setRandomMoney() {
+    Hero.money = (int) (Math.random() * 1000);
+  }
 }
